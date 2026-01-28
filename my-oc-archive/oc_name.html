@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>SAMPLE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>NAME</h1>
+
+  <!-- 러닝 커뮤 목록 -->
+  <section class="entry-links community">
+    <p>A</p>
+    <p>B</p>
+    <p>C</p>
+  </section>
+</header>
+
+<!-- 자관 링크 -->
+<section class="entry-links relations">
+  <a href="oc_name_rel1.html">relationship1</a>
+  <a href="oc_name_rel2.html">relationship2</a>
+</section>
+
+<!-- 메인 그림 -->
+<section class="gallery">
+  <h2>MY</h2>
+  <img src="images/name/main/my/01.jpg" class="zoom">
+</section>
+
+<section class="gallery">
+  <h2>OTHERS</h2>
+  <img src="images/name/main/others/01.jpg" class="zoom">
+</section>
+
+<footer>
+  <a href="list.html">← back</a>
+</footer>
+
+<!-- 라이트박스 -->
+<div id="lightbox">
+  <img id="lightbox-img">
+</div>
+
+<script>
+  const images = document.querySelectorAll('.zoom');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>

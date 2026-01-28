@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>후코코 유지 / 자관1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>후코코 유지</h1>
+  <p class="subtitle">자관1</p>
+</header>
+
+<section class="gallery">
+  <h2>MY ART</h2>
+  <img src="images/yuji/rel1/my/01.jpg" class="zoom">
+  <img src="images/yuji/rel1/my/02.jpg" class="zoom">
+</section>
+
+<section class="gallery">
+  <h2>OTHERS</h2>
+  <img src="images/yuji/rel1/others/a.jpg" class="zoom">
+</section>
+
+<footer>
+  <a href="oc_yuji.html">← back</a>
+</footer>
+
+<!-- 원본 확대용 -->
+<div id="lightbox">
+  <img id="lightbox-img">
+</div>
+
+<script>
+  const images = document.querySelectorAll('.zoom');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>

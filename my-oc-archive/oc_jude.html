@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Jude</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Jude/Judah Ishmael</h1>
+
+  <!-- 러닝 커뮤 목록 -->
+  <section class="entry-links community">
+    <p>-메르헨 랜드에 초대합니다</p>
+    <p>-계시록 위의 약속</p>
+    <p>-SΛBBΛƬH</p>
+  </section>
+</header>
+
+<!-- 자관 링크 -->
+<section class="entry-links relations">
+  <a href="oc_jude_rel1.html">???</a>
+  <a href="oc_jude_rel2.html">♥Rocket</a>
+</section>
+
+<!-- 메인 그림 -->
+<section class="gallery">
+  <h2>MY</h2>
+  <img src="images/jude/main/my/01.jpg" class="zoom">
+</section>
+
+<section class="gallery">
+  <h2>OTHERS</h2>
+  <img src="images/jude/main/others/01.jpg" class="zoom">
+</section>
+
+<footer>
+  <a href="list.html">← back</a>
+</footer>
+
+<!-- 라이트박스 -->
+<div id="lightbox">
+  <img id="lightbox-img">
+</div>
+
+<script>
+  const images = document.querySelectorAll('.zoom');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>

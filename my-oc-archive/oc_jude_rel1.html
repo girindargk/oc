@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>???</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>???</h1>
+  <p class="subtitle">Jude</p>
+</header>
+
+<section class="gallery">
+  <h2>MY</h2>
+  <img src="images/jude/rel1/my/01.png" class="zoom">
+</section>
+
+<section class="gallery">
+  <h2>OTHERS</h2>
+  <img src="images/jude/rel1/others/01.jpg" class="zoom">
+  <img src="images/jude/rel1/others/02.png" class="zoom">
+  <img src="images/jude/rel1/others/03.jpg" class="zoom">
+  <img src="images/jude/rel1/others/04.png" class="zoom">
+</section>
+
+<footer>
+  <a href="oc_jude.html">← back</a>
+</footer>
+
+<!-- 원본 확대용 -->
+<div id="lightbox">
+  <img id="lightbox-img">
+</div>
+
+<script>
+  const images = document.querySelectorAll('.zoom');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
